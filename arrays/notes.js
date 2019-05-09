@@ -35,23 +35,23 @@
     
 // }
 
-// const notes = [{}, {
-//     title: 'My next trip',
-//     body: 'I would like to go to Spain.'
-// }, {
-//     title: 'Habbits to work on ',
-//     body: 'Exercise. Eating a bit healthier.'
-// },{
-//     title: 'Office modification',
-//     body: 'Get a new seat.'
-// }]
+const notes = [{
+    title: 'My next trip',
+    body: 'I would like to go to Spain.'
+}, {
+    title: 'Habbits to work on ',
+    body: 'Exercise. Eating a bit healthier.'
+},{
+    title: 'Office modification',
+    body: 'Get a new seat.'
+}]
 
-// const findNote = function(notes, noteTitle) {
-//     const note = notes.find(function(note, index) {
-//         return note.title.toLowerCase() === noteTitle.toLowerCase() 
-//     })
-//     return notes
-// }
+const findNote = function(notes, noteTitle) {
+    return notes.find(function(note, index) {
+    return note.title.toLowerCase() === noteTitle.toLowerCase() 
+    })
+    
+}
 
 
 // const note = findNote(notes, 'office modification')
@@ -64,6 +64,9 @@
 //     })
 //     return notes[index]
 // }
+
+const note = findNote(notes, 'office modification')
+console.log(note)
 
 // console.log(notes.length)
 // console.log(notes)
