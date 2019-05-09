@@ -9,7 +9,11 @@
 //     // more statements
 // }
 
+<<<<<<< HEAD
 //
+=======
+
+>>>>>>> 374d7d720c8c61e22e9fbcf91e507ccbbd1a9b7f
 for (let i = 0; i < 3; i++) {
     console.log(i);
     //break;
