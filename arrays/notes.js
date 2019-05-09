@@ -46,6 +46,7 @@ const notes = [{
     body: 'Get a new seat.'
 }]
 
+
 const findNote = function(notes, noteTitle) {
     return notes.find(function(note, index) {
     return note.title.toLowerCase() === noteTitle.toLowerCase() 
@@ -53,6 +54,25 @@ const findNote = function(notes, noteTitle) {
     
 }
 
+
+const findNotes = function (notes, query) {
+    return notes.filter(function (note, index){
+        const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase)
+        const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCaseq)
+        return isTitleMatch || isBodyMatch
+    })
+   
+}
+
+
+
+
+console.log(findNotes(notes, 'work'))
+
+
+
+const note = findNote(notes, 'some other office modification')
+console.log(note)
 
 // const note = findNote(notes, 'office modification')
 // console.log(note)
@@ -65,8 +85,7 @@ const findNote = function(notes, noteTitle) {
 //     return notes[index]
 // }
 
-const note = findNote(notes, 'office modification')
-console.log(note)
+
 
 // console.log(notes.length)
 // console.log(notes)
@@ -75,3 +94,6 @@ console.log(note)
 //    return note.title === 'Habbits to work on '
 // });
 // console.log(index)
+
+//--44 Filtering Arrays
+
