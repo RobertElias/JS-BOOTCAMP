@@ -36,10 +36,10 @@
 
 const todos = [{
     text: 'Order cat food',
-    completed: true
+    completed: false
 }, {
     text: 'Clean kitchen',
-    completed: false
+    completed: true
 }, {
     text: 'Buy food',
     completed: true
@@ -58,8 +58,24 @@ const deleteTodo = function (todos, todoText) {
         todos.splice(index, 1)
     }
 }
+
+
+
+const getThingsToDo = function (todos) {
+    return todos.filter(function(todo){
+        return !todo.completed
+    })
+}
+
+
+
+console.log(getThingsToDo(todos))
+
+
 //1. Convert array to array of objects -> text, completed
 //2. Created function to remove a todo by text value
 
-deleteTodo(todos, 'buy food')
-console.log(todos)
+// deleteTodo(todos, 'buy food')
+// console.log(todos)
+
+//--44 Filtering Arrays
