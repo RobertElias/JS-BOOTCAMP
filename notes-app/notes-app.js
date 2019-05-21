@@ -10,7 +10,15 @@
 const ps = document.querySelectorAll('p')
 
 ps.forEach(function (p) {
-    //p.textContent = '***********########'
+    p.textContent = '***********########'
     //p.remove()
     //console.log(p.textContent)
 })
+
+//Add a new element
+
+
+const newParagraph = document.createElement('p')
+
+newParagraph.textContent = 'This is a new element from JavaScript'
+document.querySelector('body').appendChild(newParagraph)
