@@ -39,3 +39,8 @@ todos.forEach(function(todo) {
 //         paragraph.remove()
 //     }
 // })
+
+document.querySelector('button').addEventListener('click', function (e){
+    console.log('I am adding a new todo item')
+    console.log(e)
+})
