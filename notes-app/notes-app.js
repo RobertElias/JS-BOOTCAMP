@@ -20,3 +20,14 @@ document.querySelector('#remove-all').addEventListener('click', function () {
     })
 })
 
+
+//--Single--
+//p
+//#replace
+//.item
+
+
+//--Multiple--
+//button.inventory
+//.h1.title.application
+//.h1.application#title
