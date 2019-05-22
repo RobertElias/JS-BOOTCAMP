@@ -15,5 +15,8 @@ document.querySelector('#create-note').addEventListener('click', function (e) {
 })
 
 document.querySelector('#remove-all').addEventListener('click', function () {
-    console.log('Delete all notes')
+    document.querySelectorAll('.note').forEach(function(note) {
+        note.remove()
+    })
 })
+
