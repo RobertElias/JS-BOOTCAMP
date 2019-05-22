@@ -10,28 +10,7 @@ const notes = [{
     body: 'Get a new seat.'
 }]
 
-//DOM Document Object Model
-
-// //Query and remove
-// const p = document.querySelector('p');
-
-// p.remove();
-
-//Query all and remove
-
-const ps = document.querySelectorAll('p')
-
-ps.forEach(function (p) {
-    p.textContent = '***********########'
-    //p.remove()
-    //console.log(p.textContent)
+document.querySelector('button').addEventListener('click', function (e){
+    console.log('Did this work?')
+    console.log(e)
 })
-
-//Add a new element
-
-
-const newParagraph = document.createElement('p')
-
-newParagraph.textContent = 'This is a new element from JavaScript'
-document.querySelector('body').appendChild(newParagraph)
-
