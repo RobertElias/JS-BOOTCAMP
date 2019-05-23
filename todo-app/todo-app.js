@@ -45,6 +45,6 @@ document.querySelector('#add-todo').addEventListener('click', function (e){
   
 })
 
-document.querySelector('#search-text').addEventListener('input', function (e) {
+document.querySelector('#newtodo-text').addEventListener('input', function (e) {
     console.log(e.target.value)
 })
