@@ -16,13 +16,19 @@ const todos = [{
 }]
 
 const filters = {
-    searchText: ''
+    searchText: '',
+    hideCompleted: false
 }
 
 const renderTodos = function (todos, filters) {
     const filteredTodos = todos.filter(function (todo) {
-        return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+        const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+        const hideCompletedMatch = !filters.hideCompleted || !todo.completed
+        
+        return searchTextMatch && hideCompletedMatch
     })
+
+   
 
     const incompleteTodos = filteredTodos.filter(function (todo) {
         return !todo.completed
@@ -59,8 +65,10 @@ document.querySelector('#new-todo').addEventListener('submit', function (e) {
     e.target.elements.text.value = ''
 })
 
-//1. Create a form with a single input for todo text
-//2. Setup and submit handler and cancel the default action 
-//3. Add a new item to the todos array with that text data (completed value of falst)
-//4. Rerender the application
-//5. Clear te input field value
+document.querySelector('#hide-completed').addEventListener('change', function (e) {
+    filters.hideCompleted = e.target.checked
+    renderTodos(todos, filters)          
+})
+
+
+
