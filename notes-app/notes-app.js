@@ -14,7 +14,7 @@ document.querySelector('#create-note').addEventListener('click', function (e) {
         title: '',
         body: ''
     })
-    localStorage.setItem('notes', JSON.stringify(notes))
+    saveNotes(notes)
     renderNotes(notes, filters)
 })
 
@@ -28,14 +28,3 @@ document.querySelector('#filter-by').addEventListener('change', function (e){
 })
 
 
-
-//--Single--
-//p
-//#replace
-//.item
-
-
-//--Multiple--
-//button.inventory
-//.h1.title.application
-//.h1.application#title
